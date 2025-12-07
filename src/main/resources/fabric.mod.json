@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mcproxy",
+  "version": "${version}",
+  "name": "mcproxy",
+  "description": "Connect to servers using SOCKS4, SOCKS5 and HTTP proxies.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mcproxy/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.ng5m.mcproxy.client.MCProxyClient"
+    ],
+    "main": [
+      "dev.ng5m.mcproxy.MCProxy"
+    ]
+  },
+  "mixins": [
+    "mcproxy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
